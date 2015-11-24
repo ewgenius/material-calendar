@@ -114,7 +114,7 @@ gulp.task('elements', function() {
 });
 
 // Transpile all JS to ES5.
-gulp.task('js', function () {
+gulp.task('js', function() {
   return gulp.src(['app/**/*.{js,html}'])
     .pipe($.sourcemaps.init())
     .pipe($.if('*.html', $.crisper())) // Extract JS from .html files
@@ -319,8 +319,7 @@ gulp.task('serve:dist', ['default'], function() {
 gulp.task('default', ['clean'], function(cb) {
   // Uncomment 'cache-config' after 'rename-index' if you are going to use service workers.
   runSequence(
-    ['copy', 'styles'],
-    ['elements', 'js'], ['jshint', 'images', 'fonts', 'html'],
+    ['copy', 'styles'], ['elements', 'js'], ['jshint', 'images', 'fonts', 'html'],
     'vulcanize', 'rename-index', 'remove-old-build-index', // 'cache-config',
     cb);
 });
