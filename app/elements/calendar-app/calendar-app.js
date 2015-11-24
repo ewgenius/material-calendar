@@ -3,6 +3,7 @@ class CalendarApp {
     this.is = 'calendar-app';
     this.properties = {
       route: String,
+      user: Object,
       foo: {
         type: String,
         value: 'calendar-app',
@@ -12,23 +13,18 @@ class CalendarApp {
   }
 
   created() {
-    console.log('created');
   }
 
   ready() {
-    console.log('ready')
   }
 
-  attached() {
-    console.log('attached');
+  handleSignIn() {
+    this.user = gapi.auth2.getAuthInstance().currentUser.get().getBasicProfile();
+    console.log(this.user);
   }
 
-  detached() {
-    console.log('detached');
-  }
-
-  attributeChanged() {
-    console.log('attributeChanged');
+  handleSignOut() {
+    console.log('sign out');
   }
 }
 

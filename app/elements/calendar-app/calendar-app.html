@@ -21,6 +21,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <div class="flex layout horizontal center">
       <div class="flex layout vertical center">
         <google-signin raised client-id="762011012102-11t1i8bflui24es4dc81iprr6qrkj3tt.apps.googleusercontent.com" scopes="https://www.googleapis.com/auth/calendar"></google-signin>
+        <google-signin-aware
+        scopes="https://www.googleapis.com/auth/calendar"
+        on-google-signin-aware-success="handleSignIn"
+        on-google-signin-aware-signed-out="handleSignOut"></google-signin-aware>
       </div>
     </div>
   </template>
