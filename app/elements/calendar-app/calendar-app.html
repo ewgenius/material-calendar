@@ -15,10 +15,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       :host {
         display: block;
+        @apply(--layout-vertical);
       }
     </style>
-    <div class="root">
-      <google-signin client-id="AIzaSyD_TNSTJY1GdrTwFhfHSNojBiYWRpzSKzc" scopes="https://www.googleapis.com/auth/calendar"></google-signin>
+    <div class="flex layout horizontal center">
+      <div class="flex layout vertical center">
+        <google-signin client-id="762011012102-11t1i8bflui24es4dc81iprr6qrkj3tt.apps.googleusercontent.com" scopes="https://www.googleapis.com/auth/calendar"></google-signin>
+      </div>
     </div>
   </template>
   <script src="./calendar-app.js"></script>

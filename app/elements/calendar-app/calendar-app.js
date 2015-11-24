@@ -1,5 +1,3 @@
-var a = () => {};
-
 class CalendarApp {
   beforeRegister() {
     this.is = 'calendar-app';
